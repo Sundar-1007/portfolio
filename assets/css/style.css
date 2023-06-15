@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(37, 37, 37);
+}
+
+.font-fam2 {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.font-serif{
+    font-family: serif;
+    letter-spacing: .5px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Signika Negative', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: calc(0% + 10%);
+    width: 300px;
+    height: 100%;
+    padding: 0 20px;
+    background: #f2f3f7;
+    /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+}
+
+.profile {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    /* border: 10px solid #5f77ff; */
+    border-radius: 50%;
+    background-color: white;
+}
+
+.nav-link {
+    color: var(--primary-color);
+}
+
+.nav-link.active {
+    color: var(--bs-primary);
+}
+
+main {
+    width: calc(100% - 330px);
+    margin-left: auto;
+    /* background: #e0edff; */
+    /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+}
+
+section{
+    height: 100vh;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    font-size: 70px ;
+    text-transform: uppercase;
+}
+
+.fs-7{
+    font-size: .8rem;
+}
+
+.text-1{
+    line-height: 2;
+    letter-spacing: .5px;
+    word-spacing: 5px;
+    font-size: 18px;
+}
+
+.card {
+    border: 0;
+    border-bottom: 2px solid;
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card:hover .card-body{
+    transform: scale(1.10);
+}
+
+.card-body{
+    height: 150px;
+    transition: .3s;
+}
+
+.bar {
+    background: #e9ecef;
+    height: 6px;
+    border-radius: 10px;
+}
+
+span.bar-w {
+    height: 100%;
+    display: block;
+    position: relative;
+    border-radius: 10px;
+}
+
+span.bar-w::after {
+    width: 12px;
+    height: 12px;
+    content: '';
+    position: absolute;
+    background: inherit;
+    right: 0;
+    top: -50%;
+    border-radius: 50%;
+}
+
+.above {
+    position: absolute;
+    right: -9px;
+    top: -22px;
+    font-size: 12px;
+    letter-spacing: .5px;
+    font-weight: 700;
+}
