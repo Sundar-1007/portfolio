@@ -7,15 +7,33 @@
     box-sizing: border-box;
 }
 
+
+*::selection {
+    background: #f2f3f7;
+}
+
 :root {
     --primary-color: rgb(37, 37, 37);
 }
+
+::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Set the background color of the track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #b4b4b4; /* Set the color of the scrollbar */
+    border-radius: 5px; /* Rounded corners */
+  }
 
 .font-fam2 {
     font-family: 'Signika Negative', sans-serif;
 }
 
-.font-serif{
+.font-serif {
     font-family: serif;
     letter-spacing: .5px;
 }
@@ -23,6 +41,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     font-family: 'Signika Negative', sans-serif;
@@ -64,7 +83,7 @@ main {
     /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
 }
 
-section{
+section {
     height: 100vh;
     padding: 5%;
     display: flex;
@@ -73,15 +92,15 @@ section{
 }
 
 .name {
-    font-size: 70px ;
+    font-size: 70px;
     text-transform: uppercase;
 }
 
-.fs-7{
+.fs-7 {
     font-size: .8rem;
 }
 
-.text-1{
+.text-1 {
     line-height: 2;
     letter-spacing: .5px;
     word-spacing: 5px;
@@ -97,11 +116,11 @@ section{
     transition: .3s;
 }
 
-.card:hover .card-body{
+.card:hover .card-body {
     transform: scale(1.10);
 }
 
-.card-body{
+.card-body {
     height: 150px;
     transition: .3s;
 }
@@ -137,4 +156,197 @@ span.bar-w::after {
     font-size: 12px;
     letter-spacing: .5px;
     font-weight: 700;
+}
+
+.box .iconbtn {
+    width: 25px;
+    cursor: pointer;
+    height: 20px;
+}
+
+.box span {
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    height: 3px;
+    background: black;
+    transition: all .3s;
+    position: relative;
+}
+
+.box span+span {
+    margin-top: 5px;
+}
+
+.box.active span:nth-child(1) {
+    animation: ease .7s top forwards;
+}
+
+.box.not-active span:nth-child(1) {
+    animation: ease .7s top-2 forwards;
+}
+
+.box.active span:nth-child(2) {
+    animation: ease .7s scaled forwards;
+}
+
+.box .not-active span:nth-child(2) {
+    animation: ease .7s scaled-2 forwards;
+}
+
+.box.active span:nth-child(3) {
+    animation: ease .7s bottom forwards;
+}
+
+.box.not-active span:nth-child(3) {
+    animation: ease .7s bottom-2 forwards;
+}
+
+@keyframes top {
+    0% {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    50% {
+        top: 10px;
+        transform: rotate(0);
+    }
+
+    100% {
+        top: 10px;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes top-2 {
+    0% {
+        top: 10px;
+        transform: rotate(45deg);
+    }
+
+    50% {
+        top: 10px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 0;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes bottom {
+    0% {
+        bottom: 0;
+        transform: rotate(0);
+    }
+
+    50% {
+        bottom: 10px;
+        transform: rotate(0);
+    }
+
+    100% {
+        bottom: 6px;
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes bottom-2 {
+    0% {
+        bottom: 10px;
+        transform: rotate(135deg);
+    }
+
+    50% {
+        bottom: 10px;
+        transform: rotate(0);
+    }
+
+    100% {
+        bottom: 0;
+        transform: rotate(0);
+    }
+}
+
+@keyframes scaled {
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes scaled-2 {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.box {
+    padding: 20px;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    background: #ffe4c49c;
+    border-radius: 0 0 70%;
+}
+
+.box.d-lg-none.active {
+    background: red;
+}
+
+.box.d-lg-none.active span {
+    background: white;
+}
+
+.accordion *    {
+    border-radius: 0 !important;
+}
+
+.accordion-item:not(:first-of-type){
+    border-top: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color)!important;
+}
+
+.accordion-button{
+    background: #f2f3f7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.accordion-button:focus , .accordion-button:not(.collapsed){
+    background: #2c98f0;
+    color: white;
+}
+
+@media(max-width:992px) {
+
+    aside {
+        height: 100vh;
+        left: -100%;
+        transition: .5s;
+        z-index: 4;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .box.active + aside {
+        left: 0%;
+    }
 }
