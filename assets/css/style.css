@@ -9,7 +9,7 @@
 
 
 *::selection {
-    background: #f2f3f7;
+    background: #dde4fd;
 }
 
 :root {
@@ -51,7 +51,7 @@ body {
 aside {
     position: fixed;
     top: 0;
-    left: calc(0% + 10%);
+    /* left: calc(0% + 10%); */
     width: 300px;
     height: 100%;
     padding: 0 20px;
@@ -84,7 +84,7 @@ main {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     padding: 5%;
     display: flex;
     justify-content: center;
@@ -100,11 +100,15 @@ section {
     font-size: .8rem;
 }
 
-.text-1 {
+.text-1 , .text-2 {
     line-height: 2;
     letter-spacing: .5px;
     word-spacing: 5px;
     font-size: 18px;
+}
+
+.text-2{
+    font-size: 14px;
 }
 
 .card {
@@ -118,6 +122,10 @@ section {
 
 .card:hover .card-body {
     transform: scale(1.10);
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 4px 9px 8px;
 }
 
 .card-body {
@@ -200,6 +208,32 @@ span.bar-w::after {
 
 .box.not-active span:nth-child(3) {
     animation: ease .7s bottom-2 forwards;
+}
+
+#contact .icon {
+    height: 50px;
+}
+
+footer{
+    background-color: #f2f3f7;
+}
+
+textarea#contact {
+    outline: none;
+    width: 100%;
+    resize: none;
+    height: 100px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+}
+
+.aside.icon {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 10px;
 }
 
 @keyframes top {

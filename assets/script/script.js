@@ -9,6 +9,11 @@ $('.nav-item .nav-link').click(function () {
   $(this).addClass('active')
 });
 
+$(window).on('scroll', function () {
+  $(iconbtn).addClass('not-active');
+  $(iconbtn).removeClass('active');
+})
+
 // $(window).scroll(function() {
 //     var scrollTop = $(window).scrollTop(); // Get the current scroll position
 //     var viewportHeight = $(window).height(); // Get the viewport height
@@ -31,6 +36,7 @@ $(document).ready(function () {
     var section3Offset = $('#skills').offset().top;
     var section4Offset = $('#exp').offset().top;
     var section5Offset = $('#edu').offset().top;
+    var section6Offset = $('#contact').offset().top;
 
     // Add/remove "nav-active" class based on scroll position
     if (scrollDistance >= section1Offset && scrollDistance < section2Offset) {
@@ -47,7 +53,17 @@ $(document).ready(function () {
       $('.nav a[href="#exp"]').addClass('active');
     } else if (scrollDistance >= section5Offset && scrollDistance < section6Offset) {
       $('.nav-link ').removeClass('active');
-      $('.nav a[href="#exp"]').addClass('active');
+      $('.nav a[href="#edu"]').addClass('active');
+    }else if (scrollDistance >= section6Offset+section1Offset) {
+      $('.nav-link ').removeClass('active');
+      $('.nav a[href="#contact"]').addClass('active');
     }
   });
 });
+
+
+var date = new Date();
+let year = date.getFullYear();
+setInterval(function(){
+  document.getElementById('year').innerHTML = year;
+}, 10000)
