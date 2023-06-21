@@ -17,17 +17,21 @@
 }
 
 ::-webkit-scrollbar {
-    width: 5px; /* Set the width of the scrollbar */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: transparent; /* Set the background color of the track */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #b4b4b4; /* Set the color of the scrollbar */
-    border-radius: 5px; /* Rounded corners */
-  }
+    width: 5px;
+    /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Set the background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b4b4b4;
+    /* Set the color of the scrollbar */
+    border-radius: 5px;
+    /* Rounded corners */
+}
 
 .font-fam2 {
     font-family: 'Signika Negative', sans-serif;
@@ -79,6 +83,7 @@ aside {
 main {
     width: calc(100% - 330px);
     margin-left: auto;
+    overflow: hidden;
     /* background: #e0edff; */
     /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
 }
@@ -100,14 +105,15 @@ section {
     font-size: .8rem;
 }
 
-.text-1 , .text-2 {
+.text-1,
+.text-2 {
     line-height: 2;
     letter-spacing: .5px;
     word-spacing: 5px;
     font-size: 18px;
 }
 
-.text-2{
+.text-2 {
     font-size: 14px;
 }
 
@@ -214,12 +220,12 @@ span.bar-w::after {
     height: 50px;
 }
 
-footer{
+footer {
     background-color: #f2f3f7;
 }
 
-form input[type='mail']{
-    outline: none;  
+form input[type='mail'] {
+    outline: none;
     border: 1px solid rgb(175 175 175);
     border-bottom: 0px solid;
     margin: auto;
@@ -358,21 +364,22 @@ textarea#contact {
     background: white;
 }
 
-.accordion *    {
+.accordion * {
     border-radius: 0 !important;
 }
 
-.accordion-item:not(:first-of-type){
-    border-top: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color)!important;
+.accordion-item:not(:first-of-type) {
+    border-top: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color) !important;
 }
 
-.accordion-button{
+.accordion-button {
     background: #f2f3f7;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-.accordion-button:focus , .accordion-button:not(.collapsed){
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
     background: #2c98f0;
     color: white;
 }
@@ -390,7 +397,7 @@ textarea#contact {
         width: 100%;
     }
 
-    .box.active + aside {
+    .box.active+aside {
         left: 0%;
     }
 }

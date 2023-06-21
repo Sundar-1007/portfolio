@@ -67,3 +67,5 @@ let year = date.getFullYear();
 setInterval(function(){
   document.getElementById('year').innerHTML = year;
 }, 10000)
+
+AOS.init(); 
