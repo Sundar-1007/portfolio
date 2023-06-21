@@ -218,6 +218,15 @@ footer{
     background-color: #f2f3f7;
 }
 
+form input[type='mail']{
+    outline: none;  
+    border: 1px solid rgb(175 175 175);
+    border-bottom: 0px solid;
+    margin: auto;
+    display: block;
+    padding: 10px;
+}
+
 textarea#contact {
     outline: none;
     width: 100%;
@@ -226,6 +235,7 @@ textarea#contact {
     margin: auto;
     display: block;
     padding: 10px;
+    border: 1px solid rgb(175 175 175);
 }
 
 .aside.icon {
