@@ -402,3 +402,9 @@ textarea#contact {
         left: 0%;
     }
 }
+
+@media(max-width:400px){
+    body{
+        padding: 0;
+    }
+}
