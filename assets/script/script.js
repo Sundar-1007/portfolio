@@ -36,7 +36,7 @@ $(document).ready(function () {
     var section3Offset = $('#skills').offset().top;
     var section4Offset = $('#exp').offset().top;
     var section5Offset = $('#edu').offset().top;
-    var section6Offset = $('#contact').offset().top;
+    // var section6Offset = $('#contact').offset().top;
 
     // Add/remove "nav-active" class based on scroll position
     if (scrollDistance >= section1Offset && scrollDistance < section2Offset) {
@@ -51,13 +51,14 @@ $(document).ready(function () {
     } else if (scrollDistance >= section4Offset && scrollDistance < section5Offset) {
       $('.nav-link ').removeClass('active');
       $('.nav a[href="#exp"]').addClass('active');
-    } else if (scrollDistance >= section5Offset && scrollDistance < section6Offset) {
+    } else if (scrollDistance >= section5Offset+section1Offset) {
       $('.nav-link ').removeClass('active');
       $('.nav a[href="#edu"]').addClass('active');
-    }else if (scrollDistance >= section6Offset+section1Offset) {
-      $('.nav-link ').removeClass('active');
-      $('.nav a[href="#contact"]').addClass('active');
     }
+    // else if (scrollDistance >= section6Offset+section1Offset) {
+    //   $('.nav-link ').removeClass('active');
+    //   $('.nav a[href="#contact"]').addClass('active');
+    // }
   });
 });
 

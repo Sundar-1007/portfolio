@@ -251,7 +251,15 @@ textarea#contact {
     width: 100%;
     left: 0;
     padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
 }
+
+.aside.icon .icon {
+    width: 100%;
+    max-width: 40px;
+}
+
 
 @keyframes top {
     0% {
